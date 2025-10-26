@@ -6,8 +6,11 @@ Equipo de 5 estudiantes:
 -	Jhandry Jahir Campoverde Izquierdo
 -	Luis Javier Armijos Llacsahuanga
 
-*Ejercicios Propuestos:
-Cerradura Electrónica
-Cuenta Bancaria
-Ecuación cuadrática
-Fracción
+# Ejercicios Propuestos
+Cerradura Electrónica:
+
+Cuenta Bancaria:
+
+Ecuación cuadrática:
+
+Fracción:
