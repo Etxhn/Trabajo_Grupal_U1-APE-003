@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class BancoApp {
+    private static Scanner sc = new Scanner(System.in);
+    private static CuentaBancaria cuenta = null;
+
+    public static void main(String[] args) {
+        int opcion;
+        do {
+            mostrarMenu();
+            opcion = leerEntero("Seleccione una opción: ");
+            ejecutarOpcion(opcion);
+        } while (opcion != 5);
+
+        System.out.println("Programa finalizado.");
+    }
+
+    private static void mostrarMenu() {
+        System.out.println("\n===== MENU CUENTA BANCARIA =====");
+        System.out.println("1. Crear cuenta");
+        System.out.println("2. Depositar");
+        System.out.println("3. Retirar");
+        System.out.println("4. Consultar saldo e historial");
+        System.out.println("5. Salir");
+    }
+
+    private static void ejecutarOpcion(int opcion) {
+        switch (opcion) {
+            case 1 -> crearCuenta();
+            case 2 -> depositar();
+            case 3 -> retirar();
+            case 4 -> consultar();
+            case 5 -> System.out.println("Saliendo...");
+            default -> System.out.println("Opción no válida.");
+        }
+    }
+
+    private static void crearCuenta() {
+        System.out.print("Ingrese número de cuenta: ");
+        String num = sc.nextLine();
+        System.out.print("Ingrese nombre del titular: ");
+        String titular = sc.nextLine();
+
+        cuenta = new CuentaBancaria(num, titular);
+        System.out.println("Cuenta creada exitosamente con saldo 0");
+    }
+
+    private static void depositar() {
+        if (!validar()) return;
+
+        double monto = leerDouble("Monto a depositar: ");
+        if (cuenta.depositar(monto))
+            System.out.println("Depósito exitoso.");
+        else
+            System.out.println("Monto inválido.");
+    }
+
+    private static void retirar() {
+        if (!validar()) return;
+
+        double monto = leerDouble("Monto a retirar: ");
+        if (cuenta.retirar(monto))
+            System.out.println("Retiro exitoso.");
+        else
+            System.out.println("Monto inválido o saldo insuficiente.");
+    }
+
+    private static void consultar() {
+        if (!validar()) return;
+        cuenta.mostrarDatos();
+        cuenta.mostrarHistorial();
+    }
+
+    private static boolean validar() {
+        if (cuenta == null) {
+            System.out.println("Debe crear una cuenta primero.");
+            return false;
+        }
+        return true;
+    }
+
+    private static int leerEntero(String msg) {
+        System.out.print(msg);
+        while (!sc.hasNextInt()) {
+            sc.next();
+            System.out.print("Entrada inválida. Intente: ");
+        }
+        int v = sc.nextInt();
+        sc.nextLine();
+        return v;
+    }
+
+    private static double leerDouble(String msg) {
+        System.out.print(msg);
+        while (!sc.hasNextDouble()) {
+            sc.next();
+            System.out.print("Entrada inválida. Intente: ");
+        }
+        double v = sc.nextDouble();
+        sc.nextLine();
+        return v;
+    }
+}
