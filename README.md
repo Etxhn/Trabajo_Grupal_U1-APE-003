@@ -7,7 +7,7 @@ Equipo de 5 estudiantes:
 -	Luis Javier Armijos Llacsahuanga
 
 # Ejercicios Propuestos
-Cerradura Electrónica:
+*Cerradura Electrónica:*
 Implementar el funcionamiento de una cerradura electrónica con clave numérica de 4 dígitos. Debe permitir:
 -	Configurar clave
 -	Validar clave ingresada
