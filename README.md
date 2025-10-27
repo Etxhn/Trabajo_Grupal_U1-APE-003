@@ -7,14 +7,14 @@ Equipo de 5 estudiantes:
 -	Luis Javier Armijos Llacsahuanga
 
 # Ejercicios Propuestos
-*Cerradura Electrónica:*
+# *Cerradura Electrónica:*
 Implementar el funcionamiento de una cerradura electrónica con clave numérica de 4 dígitos. Debe permitir:
 -	Configurar clave
 -	Validar clave ingresada
 -	Bloquear después de 3 intentos fallidos
 -	Usar Integer para manejo de claves
 
-Cuenta Bancaria:
+# *Cuenta Bancaria:*
 Implementar un programa simple para una cuenta bancaria que incluya:
 -	Número de cuenta, nombre del titular, saldo inicial.
 -	Realizar depósitos y retiros.
@@ -34,7 +34,7 @@ Para las pruebas verificar casos como:
 -	Retirar 850 → saldo final 150
 -	Historial que registre "Depósito: + 500", "Retiro:−850".
 
-Ecuación cuadrática:
+# *Ecuación cuadrática:*
 Implementar un programa simple para una Ecuación cuadrática que incluya los siguientes requisitos:
 -	Represente una ecuación cuadrática de la forma ax^2 + bx + c = 0
 -	Calcule el discriminante (b^2 - 4ac)
@@ -51,7 +51,7 @@ Para las pruebas verificar casos como:
 -	x^2 +2x+1=0 → raíz doble -1.
 -	x^2 +x+1=0 → raíces complejas.
 
-Fracción:
+# *Fracción:*
 Se desea representar fracciones matemáticas. Una fracción está formada por dos valores enteros: un numerador y un denominador, donde el denominador no puede ser cero.
 
 El sistema debe permitir:
